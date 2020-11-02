@@ -1,0 +1,30 @@
+.Memory-Game {
+    background-color: #F58FBE;
+    padding-top: 78px;
+}
+
+.how-to-play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-to-user {
+    align-self: center;
+    justify-self: center;
+}
+
+.memory-cards {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+
+.game-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+

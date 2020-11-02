@@ -1,0 +1,12 @@
+:root {
+    --red: #e63946;
+    --white: #f1faee;
+    --light-blue: #a8dadc;
+    --blue: #457b9d;
+    /* --dark-blue: #1d3557; */
+    --dark-blue: #ee4266;
+}
+
+body {
+    font-family: 'Itim', cursive;
+}

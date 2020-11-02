@@ -1,0 +1,46 @@
+.Memory-Game-Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 12px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70%;
+    background-color: var(--dark-blue);
+    height: 56px;
+    align-items: center;
+    z-index: 5;
+    width: 70%;
+}
+
+.Memory-Game-Header h1 {
+    color: var(--white);
+
+}
+
+.score {
+    display: flex;
+    align-content: flex-end;
+    width: 130px;
+}
+
+.score-name { 
+    width: 90px;
+}
+
+.score-num {
+    text-align: right;
+    width: 40px;
+}
+
+.score-container {
+    display: grid;
+    justify-items: right;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    color: var(--white);
+
+}
+
