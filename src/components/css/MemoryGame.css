@@ -1,6 +1,16 @@
 .Memory-Game {
     background-color: #F58FBE;
     padding-top: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Memory-Cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .how-to-play {
@@ -14,10 +24,27 @@
     justify-self: center;
 }
 
+@media only screen and (min-width: 600px) {
+
+    .memory-cards {
+        grid-template-columns: repeat(3, 180px);
+
+    }
+
+}
+
+@media only screen and (max-width: 599px) {
+    .memory-cards {
+        grid-template-columns: repeat(2, 180px);
+
+    }
+}
+
 .memory-cards {
     display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    align-self: center;
+    justify-self: center;
     align-items: center;
     justify-items: center;
 }

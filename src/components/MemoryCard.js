@@ -12,10 +12,6 @@ const MemoryCard = ( props ) => {
         id   :       unique id to check if it has been clicked already
         clickAction: parent method called when card is clicked
     */
-
-    useEffect(() => {    
-        console.log(`MOUNTED memory card`)
-    }, [])
     
 
     return(

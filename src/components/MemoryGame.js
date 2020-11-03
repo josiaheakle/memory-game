@@ -8,10 +8,12 @@ import "./css/MemoryGame.css"
 
 
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 const MemoryGame = (props) => {
+
+
 
     const [ score, setScore ] = useState(0);                // number of current score
     const [ highScore, setHighScore ] = useState(0);        // number of best score
@@ -19,6 +21,10 @@ const MemoryGame = (props) => {
     const [ randomize, setRandomize ] = useState(false);    // bool to send to cards when randomize is needed
     const [ hasPlayed, setHasPlayed ] = useState(false);
     const [ messageToUser, setMessageToUser ] = useState('');
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
 
     const getRandomGoodMessage = () => {
 
@@ -46,7 +52,6 @@ const MemoryGame = (props) => {
 
     const cardClicked = (cardId) => {
         
-        console.log(clickedCards)
         let gameOver = false;
         clickedCards.forEach(id => {
             if(cardId === id) {
@@ -65,18 +70,34 @@ const MemoryGame = (props) => {
     }
 
     const handleGameOver = () => {
+        scrollToTop();
         setHasPlayed(true)
         if(score > highScore) {
             setHighScore(score)
-            setMessageToUser(`You beat your high score!`)
+            saveHighScore();
+            setMessageToUser(`You lost... \nBut you did beat your high score!`)
         } else {
-            setMessageToUser(`Good game! I bet you can beat ${highScore} next time!`)
+            setMessageToUser(`You lost... I bet you can beat ${highScore} next time!`)
         }
         setScore(0)
         setClickedCards([])
         setRandomize(!randomize)
 
     }
+
+    const getHighScoreFromMemory = () => {
+        const hs = localStorage.getItem('highScore')
+        console.log(hs)
+        if(hs === null || hs === undefined) setHighScore(0);
+        else setHighScore(hs);
+    }
+
+    const saveHighScore = () => {
+        localStorage.setItem('highScore', highScore)
+    }
+
+    useEffect(() => {getHighScoreFromMemory()}, [])
+    useEffect(() => {saveHighScore()}, [ highScore ])
 
     return (
         <div className='Memory-Game'>

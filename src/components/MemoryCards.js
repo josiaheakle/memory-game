@@ -22,7 +22,8 @@ import avocadoIcon from "../imgs/72-avocado.svg"
 import kiwiIcon from "../imgs/73-kiwi.svg"
 import pineappleIcon from "../imgs/74-pineapple-1.svg"
 import peachIcon from "../imgs/75-peach.svg"
-import cherryIcon from "../imgs/76-cherry.svg"
+
+// import cherryIcon from "../imgs/76-cherry.svg"
 // import strawberryIcon from "../imgs/78-strawberry.svg"
 // import grapesIcon from "../imgs/79-grapes.svg"
 // import bananaIcon from "../imgs/81-banana.svg"
@@ -75,9 +76,9 @@ const MemoryCards = (props) => {
         {title: 'cucumber', src:cucumberIcon, id:getId()},
         {title: 'tomato', src:tomatoIcon, id:getId()},
         {title: 'avocado', src:avocadoIcon, id:getId()},
-        {title: 'kiwi', src:kiwiIcon, id:getId()},
-        {title: 'pineapple', src:pineappleIcon, id:getId()},
-        {title: 'peach', src:peachIcon, id:getId()},
+        // {title: 'kiwi', src:kiwiIcon, id:getId()},
+        // {title: 'pineapple', src:pineappleIcon, id:getId()},
+        // {title: 'peach', src:peachIcon, id:getId()},
     ]);
 
 
@@ -94,8 +95,6 @@ const MemoryCards = (props) => {
         let usedIndexes = []
         for(let i=0; i<memoryCardsData.length; i++ ) {
             let rand = Math.floor(Math.random()*memoryCardsData.length)
-            // console.log(rand)
-
             if(!usedIndexes.includes(rand)) {
                 randomizedCards.push(memoryCardsData[rand])
                 usedIndexes.push(rand)
@@ -108,7 +107,6 @@ const MemoryCards = (props) => {
     }
 
     const handleCardClick = (event) => {
-        console.log(`clicked ${event.target.id}`)
         props.onCardClick(event.target.id)
     }
 
