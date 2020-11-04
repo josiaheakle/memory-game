@@ -6,6 +6,22 @@
     justify-content: center;
 }
 
+@media only screen and (max-width: 599px) {
+    .Memory-Game {
+        height: 1750px;
+
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .Memory-Game {
+        height: 1200px;
+
+    }
+}
+
+/* 6 or 9 */
+
 .Memory-Cards {
     display: flex;
     flex-direction: column;

@@ -23,7 +23,7 @@ const MemoryGame = (props) => {
     const [ messageToUser, setMessageToUser ] = useState('');
 
     const scrollToTop = () => {
-        window.scrollTo(0, 0)
+        document.body.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
 
     const getRandomGoodMessage = () => {
@@ -60,7 +60,7 @@ const MemoryGame = (props) => {
         })
         if(gameOver !== true) {
             let rand = Math.floor(Math.random() * 20)
-            if(rand % 2) {setMessageToUser(getRandomGoodMessage())}
+            if(rand % 2 || score === 1) {setMessageToUser(getRandomGoodMessage())}
             setRandomize(!randomize)
             clickedCards.push(cardId)
             setScore(score+1)
@@ -87,7 +87,6 @@ const MemoryGame = (props) => {
 
     const getHighScoreFromMemory = () => {
         const hs = localStorage.getItem('highScore')
-        console.log(hs)
         if(hs === null || hs === undefined) setHighScore(0);
         else setHighScore(hs);
     }
