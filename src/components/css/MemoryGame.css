@@ -1,73 +1,65 @@
 .Memory-Game {
-    background-color: #F58FBE;
-    padding-top: 78px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	background-color: var(--blue);
+	padding-top: 68px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: fit-content;
 }
 
 @media only screen and (max-width: 599px) {
-    .Memory-Game {
-        height: 1750px;
-
-    }
+	.Memory-Game {
+	}
 }
 
 @media only screen and (min-width: 600px) {
-    .Memory-Game {
-        height: 1200px;
-
-    }
+	.Memory-Game {
+		min-height: calc(100vh - 68px);
+		height: fit-content;
+	}
 }
 
 /* 6 or 9 */
 
 .Memory-Cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .how-to-play {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .message-to-user {
-    align-self: center;
-    justify-self: center;
+	align-self: center;
+	justify-self: center;
 }
 
 @media only screen and (min-width: 600px) {
-
-    .memory-cards {
-        grid-template-columns: repeat(5, 180px);
-
-    }
-
+	.memory-cards {
+		grid-template-columns: repeat(5, 180px);
+	}
 }
 
 @media only screen and (max-width: 599px) {
-    .memory-cards {
-        grid-template-columns: repeat(2, 180px);
-
-    }
+	.memory-cards {
+		grid-template-columns: repeat(2, 180px);
+	}
 }
 
 .memory-cards {
-    display: grid;
-    grid-auto-rows: 180px;
-    align-self: center;
-    justify-self: center;
-    align-items: center;
-    justify-items: center;
+	display: grid;
+	grid-auto-rows: 180px;
+	align-self: center;
+	justify-self: center;
+	align-items: center;
+	justify-items: center;
 }
-
 
 .game-container {
-    margin-left: 10%;
-    margin-right: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
-

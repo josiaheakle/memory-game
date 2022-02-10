@@ -55,31 +55,31 @@ const MemoryCards = (props) => {
 
     let counter = 0;
     const getId = () => { return counter++; }
-    
-    const [ memoryCardsDom, setMemoryCardsDom] = useState(<span/>);
-    const [ memoryCardsData, setMemoryCardsData ] = useState([
-        {title: 'croissant', src:croissantIcon, id:getId()},
-        {title: 'eggplant', src:eggplantIcon, id:getId()},
-        {title: 'watermelon', src:watermelonIcon, id:getId()},
-        {title: 'salad', src:saladIcon, id:getId()},
-        {title: 'taco', src:tacoIcon, id:getId()},
-        {title: 'french fries', src:frenchFriesIcon, id:getId()},
-        {title: 'burger', src:burgerIcon, id:getId()},
-        {title: 'hot dog', src:hotDogIcon, id:getId()},
-        {title: 'pizza', src:pizzaIcon, id:getId()},
-        {title: 'pancake', src:pancakeIcon, id:getId()},
-        {title: 'bacon', src:baconIcon, id:getId()},
-        {title: 'fried egg', src:friedEggIcon, id:getId()},
-        {title: 'cheese', src:cheeseIcon, id:getId()},
-        {title: 'corn', src:cornIcon, id:getId()},
-        {title: 'carrot', src:carrotIcon, id:getId()},
-        {title: 'cucumber', src:cucumberIcon, id:getId()},
-        {title: 'tomato', src:tomatoIcon, id:getId()},
-        {title: 'avocado', src:avocadoIcon, id:getId()},
-        // {title: 'kiwi', src:kiwiIcon, id:getId()},
-        // {title: 'pineapple', src:pineappleIcon, id:getId()},
-        // {title: 'peach', src:peachIcon, id:getId()},
-    ]);
+
+    const [memoryCardsDom, setMemoryCardsDom] = useState(<span />);
+    const memoryCards = [
+        { title: 'croissant', src: croissantIcon, id: getId() },
+        { title: 'eggplant', src: eggplantIcon, id: getId() },
+        { title: 'watermelon', src: watermelonIcon, id: getId() },
+        { title: 'salad', src: saladIcon, id: getId() },
+        { title: 'taco', src: tacoIcon, id: getId() },
+        { title: 'french fries', src: frenchFriesIcon, id: getId() },
+        { title: 'burger', src: burgerIcon, id: getId() },
+        { title: 'hot dog', src: hotDogIcon, id: getId() },
+        { title: 'pizza', src: pizzaIcon, id: getId() },
+        { title: 'pancake', src: pancakeIcon, id: getId() },
+        { title: 'bacon', src: baconIcon, id: getId() },
+        { title: 'fried egg', src: friedEggIcon, id: getId() },
+        { title: 'cheese', src: cheeseIcon, id: getId() },
+        { title: 'corn', src: cornIcon, id: getId() },
+        { title: 'carrot', src: carrotIcon, id: getId() },
+        { title: 'cucumber', src: cucumberIcon, id: getId() },
+        { title: 'tomato', src: tomatoIcon, id: getId() },
+        { title: 'avocado', src: avocadoIcon, id: getId() },
+        { title: 'kiwi', src: kiwiIcon, id: getId() },
+        { title: 'pineapple', src: pineappleIcon, id: getId() },
+        // { title: 'peach', src: peachIcon, id: getId() },
+    ]
 
 
     const createMemoryCardsDom = (cards) => {
@@ -93,10 +93,10 @@ const MemoryCards = (props) => {
     const randomizeCards = () => {
         let randomizedCards = []
         let usedIndexes = []
-        for(let i=0; i<memoryCardsData.length; i++ ) {
-            let rand = Math.floor(Math.random()*memoryCardsData.length)
-            if(!usedIndexes.includes(rand)) {
-                randomizedCards.push(memoryCardsData[rand])
+        for (let i = 0; i < memoryCards.length; i++) {
+            let rand = Math.floor(Math.random() * memoryCards.length)
+            if (!usedIndexes.includes(rand)) {
+                randomizedCards.push(memoryCards[rand])
                 usedIndexes.push(rand)
             } else {
                 i--;
@@ -111,14 +111,14 @@ const MemoryCards = (props) => {
     }
 
     useEffect(() => {
-            randomizeCards();
+        randomizeCards();
     }, [props.randomize])
 
     useEffect(() => {
         randomizeCards();
     }, [])
-    
-    return(
+
+    return (
         <div className='Memory-Cards'>
             {memoryCardsDom}
         </div>

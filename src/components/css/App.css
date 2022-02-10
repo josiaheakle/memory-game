@@ -1,12 +1,16 @@
 :root {
-    --red: #e63946;
-    --white: #f1faee;
-    --light-blue: #a8dadc;
-    --blue: #457b9d;
-    /* --dark-blue: #1d3557; */
-    --dark-blue: #ee4266;
+	--red: #317b7e;
+	--white: #f1faee;
+	--light-blue: #a8dadc;
+	--blue: #6598f6;
+	/* --dark-blue: #1d3557; */
+	--dark-blue: #1e2586;
 }
 
 body {
-    font-family: 'Itim', cursive;
+	font-family: "Itim", cursive;
+}
+
+.footer {
+	padding-left: 2rem;
 }

@@ -15,15 +15,15 @@ const MemoryGame = (props) => {
 
 
 
-    const [ score, setScore ] = useState(0);                // number of current score
-    const [ highScore, setHighScore ] = useState(0);        // number of best score
-    const [ clickedCards, setClickedCards ] = useState([]); // array of clicked card ids
-    const [ randomize, setRandomize ] = useState(false);    // bool to send to cards when randomize is needed
-    const [ hasPlayed, setHasPlayed ] = useState(false);
-    const [ messageToUser, setMessageToUser ] = useState('');
+    const [score, setScore] = useState(0);                // number of current score
+    const [highScore, setHighScore] = useState(0);        // number of best score
+    const [clickedCards, setClickedCards] = useState([]); // array of clicked card ids
+    const [randomize, setRandomize] = useState(false);    // bool to send to cards when randomize is needed
+    const [hasPlayed, setHasPlayed] = useState(false);
+    const [messageToUser, setMessageToUser] = useState('');
 
     const scrollToTop = () => {
-        document.body.scrollIntoView({behavior: 'smooth', block: 'start'});
+        document.body.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     const getRandomGoodMessage = () => {
@@ -46,24 +46,24 @@ const MemoryGame = (props) => {
         ]
 
         const rand = (Math.floor(Math.random() * messages.length))
-        return(messages[rand])
+        return (messages[rand])
 
     }
 
     const cardClicked = (cardId) => {
-        
+
         let gameOver = false;
         clickedCards.forEach(id => {
-            if(cardId === id) {
+            if (cardId === id) {
                 gameOver = true;
-            } 
+            }
         })
-        if(gameOver !== true) {
+        if (gameOver !== true) {
             let rand = Math.floor(Math.random() * 20)
-            if(rand % 2 || score === 1) {setMessageToUser(getRandomGoodMessage())}
+            if (rand % 2 || score === 1) { setMessageToUser(getRandomGoodMessage()) }
             setRandomize(!randomize)
             clickedCards.push(cardId)
-            setScore(score+1)
+            setScore(score + 1)
         } else {
             handleGameOver();
         }
@@ -72,7 +72,7 @@ const MemoryGame = (props) => {
     const handleGameOver = () => {
         scrollToTop();
         setHasPlayed(true)
-        if(score > highScore) {
+        if (score > highScore) {
             setHighScore(score)
             saveHighScore();
             setMessageToUser(`You lost... \nBut you did beat your high score!`)
@@ -87,7 +87,7 @@ const MemoryGame = (props) => {
 
     const getHighScoreFromMemory = () => {
         const hs = localStorage.getItem('highScore')
-        if(hs === null || hs === undefined) setHighScore(0);
+        if (hs === null || hs === undefined) setHighScore(0);
         else setHighScore(hs);
     }
 
@@ -95,18 +95,18 @@ const MemoryGame = (props) => {
         localStorage.setItem('highScore', highScore)
     }
 
-    useEffect(() => {getHighScoreFromMemory()}, [])
-    useEffect(() => {saveHighScore()}, [ highScore ])
+    useEffect(() => { getHighScoreFromMemory() }, [])
+    useEffect(() => { saveHighScore() }, [highScore])
 
     return (
         <div className='Memory-Game'>
             <MemoryGameHeader score={score} highScore={highScore} />
             <div className='game-container'>
-                        
+
                 <div className='how-to-play'>
 
-                    {(hasPlayed === false) ? (     
-                        <div>   
+                    {(hasPlayed === false) ? (
+                        <div>
                             <h2> How to play </h2>
                             <ol>
                                 <li> Click any card </li>
@@ -114,18 +114,18 @@ const MemoryGame = (props) => {
                                 <li> Don't click the same card twice! </li>
                             </ol>
                         </div>
-                    ) 
-                    :
-                    <div>
-                        <h2 className="message-to-user"> { messageToUser } </h2>
-                    </div>
+                    )
+                        :
+                        <div>
+                            <h2 className="message-to-user"> {messageToUser} </h2>
+                        </div>
                     }
 
                 </div>
 
                 <MemoryCards randomize={randomize} onCardClick={cardClicked} />
             </div>
-            
+
             <div className='footer'>
                 <div id='author'>Game created by <a href="https://www.josiaheakle.com" title="Josiah Eakle">Josiah Eakle</a></div>
                 <div id="icon-provider">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
