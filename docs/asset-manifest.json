@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.e86cbe32.chunk.css",
+    "main.js": "/memory-game/static/js/main.23be743c.chunk.js",
+    "main.js.map": "/memory-game/static/js/main.23be743c.chunk.js.map",
+    "runtime-main.js": "/memory-game/static/js/runtime-main.0c67dbb2.js",
+    "runtime-main.js.map": "/memory-game/static/js/runtime-main.0c67dbb2.js.map",
+    "static/js/2.e157c4af.chunk.js": "/memory-game/static/js/2.e157c4af.chunk.js",
+    "static/js/2.e157c4af.chunk.js.map": "/memory-game/static/js/2.e157c4af.chunk.js.map",
+    "index.html": "/memory-game/index.html",
+    "static/css/main.e86cbe32.chunk.css.map": "/memory-game/static/css/main.e86cbe32.chunk.css.map",
+    "static/js/2.e157c4af.chunk.js.LICENSE.txt": "/memory-game/static/js/2.e157c4af.chunk.js.LICENSE.txt",
+    "static/media/42-salad.a6b61417.svg": "/memory-game/static/media/42-salad.a6b61417.svg",
+    "static/media/44-taco.402b061d.svg": "/memory-game/static/media/44-taco.402b061d.svg",
+    "static/media/46-french-fries.c88a577f.svg": "/memory-game/static/media/46-french-fries.c88a577f.svg",
+    "static/media/47-burger.1d7a5c87.svg": "/memory-game/static/media/47-burger.1d7a5c87.svg",
+    "static/media/48-hot-dog.8300bd5b.svg": "/memory-game/static/media/48-hot-dog.8300bd5b.svg",
+    "static/media/49-pizza.5cc9ddc6.svg": "/memory-game/static/media/49-pizza.5cc9ddc6.svg",
+    "static/media/53-pancake.833ec15f.svg": "/memory-game/static/media/53-pancake.833ec15f.svg",
+    "static/media/54-bacon.992c8428.svg": "/memory-game/static/media/54-bacon.992c8428.svg",
+    "static/media/55-fried-egg.98581b6a.svg": "/memory-game/static/media/55-fried-egg.98581b6a.svg",
+    "static/media/57-cheese.9ccbbde3.svg": "/memory-game/static/media/57-cheese.9ccbbde3.svg",
+    "static/media/6-croissant.a6cc9eb2.svg": "/memory-game/static/media/6-croissant.a6cc9eb2.svg",
+    "static/media/67-corn.0ddf9b61.svg": "/memory-game/static/media/67-corn.0ddf9b61.svg",
+    "static/media/68-carrot.e17d9524.svg": "/memory-game/static/media/68-carrot.e17d9524.svg",
+    "static/media/69-cucumber.5d2bb1ba.svg": "/memory-game/static/media/69-cucumber.5d2bb1ba.svg",
+    "static/media/7-eggplant.3a9b86e2.svg": "/memory-game/static/media/7-eggplant.3a9b86e2.svg",
+    "static/media/71-tomato.24f78cb4.svg": "/memory-game/static/media/71-tomato.24f78cb4.svg",
+    "static/media/72-avocado.cfe4f3da.svg": "/memory-game/static/media/72-avocado.cfe4f3da.svg",
+    "static/media/73-kiwi.33de3d28.svg": "/memory-game/static/media/73-kiwi.33de3d28.svg",
+    "static/media/74-pineapple-1.fd32e2fb.svg": "/memory-game/static/media/74-pineapple-1.fd32e2fb.svg",
+    "static/media/75-peach.60b25927.svg": "/memory-game/static/media/75-peach.60b25927.svg",
+    "static/media/8-watermelon.128a672b.svg": "/memory-game/static/media/8-watermelon.128a672b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c67dbb2.js",
+    "static/js/2.e157c4af.chunk.js",
+    "static/css/main.e86cbe32.chunk.css",
+    "static/js/main.23be743c.chunk.js"
+  ]
+}
