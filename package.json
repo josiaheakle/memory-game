@@ -3,6 +3,7 @@
   "name": "memory-game",
   "version": "1.0.0",
   "private": false,
+  "main": "public/index.html",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
